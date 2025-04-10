@@ -57,7 +57,7 @@ rm -rf docs_src/tutorial/fastapi/
 # sqlmodel is required to build fastapi, we cannot test fastapi if is not-
 # packaged yet, remove the tests to pass the check
 # ignore some pydantic model tests
-ignore="${k-}${k+ and }not test_select_gen and not test_fastapi and not test_json_schema_flat_model_pydantic_v2 and not test_json_schema_inherit_model_pydantic_v2 and not test_create_db_and_table and not "
+ignore="${k-}${k+ and }not test_select_gen and not test_fastapi and not test_json_schema_flat_model_pydantic_v2 and not test_json_schema_inherit_model_pydantic_v2 and not test_create_db_and_table"
 warningsfilter="${warningsfilter-} -W ignore::DeprecationWarning"
 export PYTHONPATH="%{buildroot}%{python3_sitelib}:${PWD}"
 
